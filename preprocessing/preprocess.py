@@ -213,6 +213,7 @@ def video_manipulate(
     mode: str,
     num_frames: int, 
     stride: int, 
+    logger
     ) -> None:
     """
     Processes a single video file by detecting and cropping the largest face in each frame and saving the results.
@@ -395,6 +396,7 @@ def preprocess(dataset_path, mask_path, mode, num_frames, stride, logger):
                 mode,
                 num_frames,
                 stride,
+                logger
                 )
             )
         # Wait for all futures to complete and log any errors
